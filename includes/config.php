@@ -1,9 +1,9 @@
 <?php
 // Database configuratie
-define('DB_SERVER', 'database-5017150390.webspace-host.com');
-define('DB_USERNAME', 'dbu2197313');
-define('DB_PASSWORD', 'f#7Yr03f3');
-define('DB_NAME', 'dbs13783541');
+// define('DB_SERVER', '');
+// define('DB_USERNAME', '');
+// define('DB_PASSWORD', '');
+// define('DB_NAME', '');
 
 // Database verbinding maken
 try {
