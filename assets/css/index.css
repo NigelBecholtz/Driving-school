@@ -1,0 +1,96 @@
+/* Animaties */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: currentColor }
+}
+
+@keyframes slideInAndFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility classes */
+.animate-fadeInUp { animation: fadeInUp 0.8s ease-out; }
+.animate-slideInLeft { animation: slideInLeft 0.8s ease-out; }
+.animate-slideInRight { animation: slideInRight 0.8s ease-out; }
+.animate-scaleIn { animation: scaleIn 0.8s ease-out; }
+
+.hover-lift { transition: transform 0.2s ease; }
+.hover-lift:hover { transform: translateY(-5px); }
+
+.hover-grow { transition: transform 0.2s ease; }
+.hover-grow:hover { transform: scale(1.02); }
+
+/* Menu styling */
+.menu a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Typing text effect */
+.typing-text {
+    border-right: 3px solid;
+    animation: typing 3.5s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Checkout specific */
+.checkout-card {
+    animation: slideInAndFade 0.8s ease-out;
+}
+
+body {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 

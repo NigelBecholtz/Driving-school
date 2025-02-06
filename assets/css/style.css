@@ -1,0 +1,135 @@
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header stijlen */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+/* Navigatie stijlen */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Form stijlen */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Package cards */
+.package-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Rooster styling */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.day-column {
+    background-color: white;
+    min-height: 600px;
+}
+
+.day-header {
+    background-color: hsl(var(--b2));
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.lesson-block {
+    padding: 0.75rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease;
+    background-color: hsl(var(--b1));
+}
+
+.lesson-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-block.booked {
+    border-left-color: hsl(var(--p));
+    background-color: hsl(var(--p)/0.1);
+}
+
+.lesson-block.available {
+    border-left-color: hsl(var(--s));
+    background-color: hsl(var(--s)/0.1);
+}
+
+.lesson-time {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: hsl(var(--bc));
+    margin-bottom: 0.5rem;
+}
+
+.student-info {
+    font-size: 0.85rem;
+    color: hsl(var(--bc)/0.8);
+}
+
+.lesson-actions {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .day-column {
+        min-height: auto;
+    }
+    
+    .day-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+} 
